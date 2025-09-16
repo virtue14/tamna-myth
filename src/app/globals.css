@@ -1,26 +1,338 @@
 @import "tailwindcss";
 
+/* 애니메이션 지연 클래스 */
+.animation-delay-75 {
+  animation-delay: 75ms;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+/* 부드러운 카드 뒤집기 애니메이션 */
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* 카드 뒤집기 부드러운 전환 */
+.card-flip-transition {
+  transition: transform 1.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+/* 카드 앞면/뒷면 부드러운 페이드 */
+.card-face-transition {
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  will-change: opacity, transform;
+}
+
+/* 카드 이미지 부드러운 전환 */
+.card-image-transition {
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+}
+
+/* 카드 호버 효과 부드러운 전환 */
+.card-hover-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 제주 신화 소주 브랜드 팔레트 */
+  
+  /* 설문대할망 컬러 (오렌지/황금 톤) */
+  --seolmundae-orange: #ff8c42; /* 따뜻한 오렌지 */
+  --seolmundae-orange-dark: #e67e22; /* 진한 오렌지 */
+  --seolmundae-orange-light: #ffb366; /* 연한 오렌지 */
+  --seolmundae-gold: #f4d03f; /* 황금색 */
+  --seolmundae-gold-dark: #d4ac0d; /* 진한 황금색 */
+  
+  /* 제주 신화 컬러 (크림/베이지 톤) */
+  --myth-cream: #f5f5dc; /* 크림색 */
+  --myth-cream-dark: #e6e6d4; /* 진한 크림색 */
+  --myth-beige: #d2b48c; /* 베이지색 */
+  --myth-beige-dark: #bc9a6a; /* 진한 베이지색 */
+  
+  /* 신화적 요소 컬러 */
+  --myth-teal: #20b2aa; /* 청록색 - 바다 */
+  --myth-teal-dark: #008b8b; /* 진한 청록색 */
+  --myth-teal-light: #40e0d0; /* 연한 청록색 */
+  
+  --myth-purple: #9370db; /* 보라색 - 신비로움 */
+  --myth-purple-dark: #663399; /* 진한 보라색 */
+  --myth-purple-light: #ba9ddb; /* 연한 보라색 */
+  
+  /* 중성 컬러 */
+  --myth-gray: #6b7280; /* 회색 */
+  --myth-gray-dark: #374151; /* 진한 회색 */
+  --myth-gray-light: #9ca3af; /* 연한 회색 */
+  
+  /* 배경 및 텍스트 */
+  --background: #fefefe;
+  --foreground: #2c3e50;
+  --muted: #f8f9fa;
+  --muted-foreground: #6c757d;
+  --border: #dee2e6;
+  --accent: #f1f3f4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  
+  /* 설문대할망 컬러 */
+  --color-seolmundae-orange: var(--seolmundae-orange);
+  --color-seolmundae-orange-dark: var(--seolmundae-orange-dark);
+  --color-seolmundae-orange-light: var(--seolmundae-orange-light);
+  --color-seolmundae-gold: var(--seolmundae-gold);
+  --color-seolmundae-gold-dark: var(--seolmundae-gold-dark);
+  
+  /* 제주 신화 컬러 */
+  --color-myth-cream: var(--myth-cream);
+  --color-myth-cream-dark: var(--myth-cream-dark);
+  --color-myth-beige: var(--myth-beige);
+  --color-myth-beige-dark: var(--myth-beige-dark);
+  
+  /* 신화적 요소 컬러 */
+  --color-myth-teal: var(--myth-teal);
+  --color-myth-teal-dark: var(--myth-teal-dark);
+  --color-myth-teal-light: var(--myth-teal-light);
+  --color-myth-purple: var(--myth-purple);
+  --color-myth-purple-dark: var(--myth-purple-dark);
+  --color-myth-purple-light: var(--myth-purple-light);
+  
+  /* 중성 컬러 */
+  --color-myth-gray: var(--myth-gray);
+  --color-myth-gray-dark: var(--myth-gray-dark);
+  --color-myth-gray-light: var(--myth-gray-light);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1a1a;
+    --foreground: #f5f5dc;
+    --muted: #2d2d2d;
+    --muted-foreground: #9ca3af;
+    --border: #404040;
+    --accent: #2d2d2d;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* 커스텀 스크롤바 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--myth-gray-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--myth-gray);
+}
+
+/* 부드러운 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 홀로그램 효과 */
+.hologram-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: hologram-sweep 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.hologram-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 150, 0.1),
+    rgba(0, 255, 255, 0.1),
+    rgba(255, 255, 0, 0.1),
+    rgba(150, 0, 255, 0.1)
+  );
+  opacity: 0.3;
+  animation: hologram-shimmer 2s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes hologram-sweep {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes hologram-shimmer {
+  0% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1.02);
+  }
+}
+
+/* 홀로그램 호버 효과 */
+.hologram-effect:hover::before {
+  animation-duration: 1s;
+}
+
+.hologram-effect:hover::after {
+  opacity: 0.5;
+  animation-duration: 0.5s;
+}
+
+/* 포커스 스타일 */
+*:focus-visible {
+  outline: 2px solid var(--seolmundae-orange);
+  outline-offset: 2px;
+}
+
+/* 프리미엄 브랜드 그라데이션 배경 */
+.brand-gradient {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #fef3c7 50%, #fed7aa 75%, #fde68a 100%);
+  position: relative;
+}
+
+.brand-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 140, 66, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(147, 112, 219, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(32, 178, 170, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.myth-gradient {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 25%, #ddd6fe 50%, #c7d2fe 75%, #a5b4fc 100%);
+  position: relative;
+}
+
+.myth-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(147, 112, 219, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(32, 178, 170, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.seolmundae-gradient {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 25%, #fdba74 50%, #fb923c 75%, #f97316 100%);
+  position: relative;
+}
+
+.seolmundae-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 25% 75%, rgba(255, 140, 66, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 75% 25%, rgba(244, 208, 63, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* 3D 카드 뒤집기 애니메이션 */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* 텍스트 줄 제한 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

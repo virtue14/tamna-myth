@@ -1,103 +1,105 @@
-import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Mountain, Sparkles, Gamepad2, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen brand-gradient">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-seolmundae-orange-dark via-myth-purple-dark to-myth-teal-dark bg-clip-text text-transparent drop-shadow-lg">
+            탐나는 신화
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-myth-gray-dark mb-4 font-medium">
+            제주 신화 × 탐나는 인재 × 한라산
+          </p>
+          
+          <p className="text-lg text-myth-gray max-w-2xl mx-auto leading-relaxed">
+            QR을 스캔하는 순간, 제주 신화의 세계가 펼쳐집니다.<br />
+            다양한 신화 이야기와 나만의 신화 캐릭터 매칭, 재미있는 게임까지<br />
+            <span className="text-xl font-bold text-myth-gray-dark bg-gradient-to-r from-seolmundae-orange-dark to-myth-purple-dark bg-clip-text text-transparent">제주의 모든 신비를 한 번에 경험하세요</span>
+          </p>
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="container mx-auto px-4 py-8">
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <Link href="/myths">
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 bg-white/95 backdrop-blur-md border-gray-200/50 hover:border-orange-300/50 group">
+              <CardHeader>
+                <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl w-fit shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110">
+                  <Mountain className="h-12 w-12 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-800 font-bold group-hover:text-orange-600 transition-colors duration-300">제주 신화</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-lg text-gray-600 leading-relaxed">
+                  소주 라벨별로 다른 제주 신화를 만나보세요. 
+                  각 신화마다 특별한 이야기와 의미가 담겨있습니다.
+                </CardDescription>
+                <div className="mt-6 text-orange-600 font-bold text-lg flex items-center justify-center gap-2 group-hover:text-orange-700 transition-colors duration-300">
+                  클릭하여 탐험하기
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/myth-character">
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 bg-white/95 backdrop-blur-md border-gray-200/50 hover:border-purple-300/50 group">
+              <CardHeader>
+                <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl w-fit shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110">
+                  <Sparkles className="h-12 w-12 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-800 font-bold group-hover:text-purple-600 transition-colors duration-300">나의 신화 캐릭터</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-lg text-gray-600 leading-relaxed">
+                  당신의 성격 유형에 맞는 신화 캐릭터를 찾아보세요. 
+                  AI가 분석한 당신만의 특별한 신화 캐릭터를 만나보세요.
+                </CardDescription>
+                <div className="mt-6 text-purple-600 font-bold text-lg flex items-center justify-center gap-2 group-hover:text-purple-700 transition-colors duration-300">
+                  클릭하여 매칭하기
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link href="/games">
+            <Card className="text-center hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:scale-105 bg-white/95 backdrop-blur-md border-gray-200/50 hover:border-teal-300/50 group">
+              <CardHeader>
+                <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-teal-500 to-teal-700 rounded-2xl w-fit shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110">
+                  <Gamepad2 className="h-12 w-12 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-gray-800 font-bold group-hover:text-teal-600 transition-colors duration-300">탐나는 게임</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-lg text-gray-600 leading-relaxed">
+                  친구들과 함께 즐길 수 있는 재미있는 술자리 게임을 제공합니다.<br/>
+                  다양한 게임을 즐겨보세요.
+                </CardDescription>
+                <div className="mt-6 text-teal-600 font-bold text-lg flex items-center justify-center gap-2 group-hover:text-teal-700 transition-colors duration-300">
+                  클릭하여 게임하기
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
