@@ -81,6 +81,10 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
         const audioUrl = URL.createObjectURL(audioBlob);
         const newAudio = new Audio(audioUrl);
         
+        // 자동재생 방지 설정
+        newAudio.autoplay = false;
+        newAudio.preload = 'none';
+        
         newAudio.onplay = () => setIsPlaying(true);
         newAudio.onpause = () => setIsPlaying(false);
         newAudio.onended = () => {
