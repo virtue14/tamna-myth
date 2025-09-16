@@ -18,7 +18,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-myth-gray-dark mb-4 font-medium">
-            제주 신화 × 탐나는 인재 × 한라산
+          탐나는 인재 × 제주 신화
           </p>
           
           <p className="text-lg text-myth-gray max-w-2xl mx-auto leading-relaxed">

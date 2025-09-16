@@ -535,7 +535,7 @@ export default function MythCharacterPage() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* 이미지와 설명을 나란히 배치 */}
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div className="grid md:grid-cols-2 gap-8 items-start">
                     {/* 신 이미지 */}
                     <div className="aspect-[2/3] rounded-3xl overflow-hidden shadow-2xl relative bg-gradient-to-br from-gray-100 to-gray-200">
                       <MythImage 
@@ -549,22 +549,23 @@ export default function MythCharacterPage() {
                       />
                     </div>
                     
-                    {/* 설명 텍스트 */}
-                    <div className="text-center md:text-left">
-                      <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                    {/* 설명 텍스트와 정보 카드들 */}
+                    <div className="text-center md:text-left space-y-6">
+                      <p className="text-lg text-gray-600 leading-relaxed">
                         {result.description}
                       </p>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-purple-50 p-4 rounded-xl">
-                      <div className="text-sm text-purple-600 mb-1">성격 유형</div>
-                      <div className="font-bold text-lg text-purple-800">{result.mbtiType}</div>
-                    </div>
-                    <div className="bg-purple-50 p-4 rounded-xl">
-                      <div className="text-sm text-purple-600 mb-1">주요 특성</div>
-                      <div className="font-bold text-lg text-purple-800">{result.traits.join(', ')}</div>
+                      
+                      {/* 정보 카드들 */}
+                      <div className="grid grid-cols-1 gap-4">
+                        <div className="bg-purple-50 p-4 rounded-xl">
+                          <div className="text-sm text-purple-600 mb-1">성격 유형</div>
+                          <div className="font-bold text-lg text-purple-800">{result.mbtiType}</div>
+                        </div>
+                        <div className="bg-purple-50 p-4 rounded-xl">
+                          <div className="text-sm text-purple-600 mb-1">주요 특성</div>
+                          <div className="font-bold text-lg text-purple-800">{result.traits.join(', ')}</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -580,25 +581,25 @@ export default function MythCharacterPage() {
                   onClick={handleRestart}
                   variant="outline"
                   size="lg"
-                  className="border-purple-300 text-purple-600 hover:bg-purple-50"
+                  className="w-full sm:w-auto border-purple-300 text-purple-600 hover:bg-purple-50"
                 >
                   <RotateCcw className="mr-2 h-5 w-5" />
                   다시 테스트하기
                 </Button>
-                <Link href={`/myth/${result.id}`}>
+                <Link href={`/myth/${result.id}`} className="w-full sm:w-auto">
                   <Button 
                     size="lg"
-                    className={`bg-gradient-to-r ${getMythColors(result.id).accent} hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300`}
+                    className={`w-full bg-gradient-to-r ${getMythColors(result.id).accent} hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300`}
                   >
                     {React.createElement(getMythIcon(result.id), { className: "mr-2 h-5 w-5" })}
                     {result.name} 상세보기
                   </Button>
                 </Link>
-                <Link href="/myths">
+                <Link href="/myths" className="w-full sm:w-auto">
                   <Button 
                     variant="outline"
                     size="lg"
-                    className="border-purple-300 text-purple-600 hover:bg-purple-50"
+                    className="w-full sm:w-auto border-purple-300 text-purple-600 hover:bg-purple-50"
                   >
                     <ArrowRight className="mr-2 h-5 w-5" />
                     다른 신화 보기
@@ -640,21 +641,27 @@ export default function MythCharacterPage() {
                             onClick={() => handleAnswerSelect(currentQuestion.id, optionIndex)}
                             className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
                               answers[currentQuestion.id] === optionIndex
-                                ? 'border-purple-500 bg-purple-50 text-purple-800 shadow-lg'
-                                : 'border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50'
+                                ? 'border-purple-600 bg-purple-100 text-purple-900 shadow-xl ring-2 ring-purple-200'
+                                : 'border-gray-300 bg-white hover:border-purple-400 hover:bg-purple-50 hover:shadow-lg'
                             }`}
                           >
                             <div className="flex items-center gap-3">
-                              <div className={`w-4 h-4 rounded-full border-2 ${
+                              <div className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
                                 answers[currentQuestion.id] === optionIndex
-                                  ? 'border-purple-500 bg-purple-500'
-                                  : 'border-gray-300'
+                                  ? 'border-purple-600 bg-purple-600 shadow-lg'
+                                  : 'border-gray-400 hover:border-purple-400'
                               }`}>
                                 {answers[currentQuestion.id] === optionIndex && (
-                                  <div className="w-full h-full rounded-full bg-white scale-50"></div>
+                                  <div className="w-full h-full rounded-full bg-white scale-60 flex items-center justify-center">
+                                    <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+                                  </div>
                                 )}
                               </div>
-                              <span className="font-medium">{option.text}</span>
+                              <span className={`font-medium transition-colors duration-300 ${
+                                answers[currentQuestion.id] === optionIndex
+                                  ? 'text-purple-900 font-semibold'
+                                  : 'text-gray-700'
+                              }`}>{option.text}</span>
                             </div>
                           </button>
                         ))}
