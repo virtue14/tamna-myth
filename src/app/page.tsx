@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mountain, Sparkles, Gamepad2, ArrowRight } from 'lucide-react';
+import { Mountain, Sparkles, Gamepad2, Images, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -93,6 +93,17 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+          </Link>
+        </div>
+
+        {/* Promotion Button */}
+        <div className="flex justify-center mt-8 sm:mt-12">
+          <Link href="/design">
+            <button className="group bg-gradient-to-r from-pink-500 to-pink-700 hover:from-pink-600 hover:to-pink-800 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
+              <Images className="h-5 w-5 sm:h-6 sm:w-6" />
+              <span className="text-sm sm:text-base lg:text-lg">프로모션 갤러리 둘러보기</span>
+              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </button>
           </Link>
         </div>
       </section>
