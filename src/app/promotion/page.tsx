@@ -325,6 +325,21 @@ export default function DesignPage() {
     const index = filteredItems.findIndex(item => item.src === src);
     setCurrentImageIndex(index);
     setSelectedImage(src);
+    
+    // 모달에서 사용할 이미지들을 미리 로드
+    const preloadModalImages = () => {
+      const prevIndex = index > 0 ? index - 1 : filteredItems.length - 1;
+      const nextIndex = index < filteredItems.length - 1 ? index + 1 : 0;
+      
+      [filteredItems[prevIndex]?.src, filteredItems[nextIndex]?.src].forEach((imageSrc) => {
+        if (imageSrc) {
+          const img = new window.Image();
+          img.src = imageSrc;
+        }
+      });
+    };
+    
+    preloadModalImages();
   };
 
   const closeModal = () => {
@@ -336,12 +351,22 @@ export default function DesignPage() {
     const prevIndex = currentImageIndex > 0 ? currentImageIndex - 1 : filteredItems.length - 1;
     setCurrentImageIndex(prevIndex);
     setSelectedImage(filteredItems[prevIndex].src);
+    
+    // 다음 이미지도 미리 로드
+    const nextIndex = prevIndex < filteredItems.length - 1 ? prevIndex + 1 : 0;
+    const img = new window.Image();
+    img.src = filteredItems[nextIndex].src;
   }, [currentImageIndex, filteredItems]);
 
   const goToNext = useCallback(() => {
     const nextIndex = currentImageIndex < filteredItems.length - 1 ? currentImageIndex + 1 : 0;
     setCurrentImageIndex(nextIndex);
     setSelectedImage(filteredItems[nextIndex].src);
+    
+    // 이전 이미지도 미리 로드
+    const prevIndex = nextIndex > 0 ? nextIndex - 1 : filteredItems.length - 1;
+    const img = new window.Image();
+    img.src = filteredItems[prevIndex].src;
   }, [currentImageIndex, filteredItems]);
 
   const goToImage = (index: number) => {
@@ -472,9 +497,9 @@ export default function DesignPage() {
           <section className="mb-12">
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-1 sm:gap-2 md:gap-3 lg:gap-4">
               {currentItems.map((item) => (
-                <div key={item.id} className="group cursor-pointer">
+                <div key={item.id} className="group">
                   <div 
-                    className="relative overflow-hidden bg-white aspect-[3/4] mb-0.5 sm:mb-1 md:mb-2 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-lg"
+                    className="relative overflow-hidden bg-white aspect-[3/4] mb-0.5 sm:mb-1 md:mb-2 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-lg cursor-pointer"
                     onClick={() => handleImageClick(item.src)}
                   >
                     <Image
@@ -500,7 +525,7 @@ export default function DesignPage() {
                     )}
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xs sm:text-xs md:text-sm lg:text-lg font-light text-gray-900 mb-0 sm:mb-0.5">{item.title}</h3>
+                    <h3 className="text-xs sm:text-xs md:text-sm lg:text-lg font-bold text-gray-900 mb-0 sm:mb-0.5">{item.title}</h3>
                     <p className="text-xs sm:text-xs md:text-sm text-gray-600 mb-0.5 sm:mb-1 font-light">{item.description}</p>
                   </div>
                 </div>
@@ -574,13 +599,13 @@ export default function DesignPage() {
             <>
               <button
                 onClick={goToPrevious}
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 transition-all duration-300 z-20 shadow-lg"
+                className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 transition-all duration-150 z-20 shadow-lg"
               >
                 <ChevronLeft className="h-8 w-8" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 transition-all duration-300 z-20 shadow-lg"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 transition-all duration-150 z-20 shadow-lg"
               >
                 <ChevronRight className="h-8 w-8" />
               </button>
@@ -594,7 +619,7 @@ export default function DesignPage() {
               alt={filteredItems[currentImageIndex]?.alt || "확대된 이미지"}
               width={800}
               height={600}
-              className="rounded-lg shadow-2xl max-w-full max-h-full object-contain transition-opacity duration-300"
+              className="rounded-lg shadow-2xl max-w-full max-h-full object-contain transition-opacity duration-150"
               priority
               quality={95}
               placeholder="blur"
@@ -632,7 +657,7 @@ export default function DesignPage() {
                     height={64}
                     className="w-full h-full object-cover"
                     loading="lazy"
-                    quality={60}
+                    quality={50}
                     sizes="64px"
                   />
                 </button>
