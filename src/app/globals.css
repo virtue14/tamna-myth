@@ -356,6 +356,20 @@ html {
   }
 }
 
+/* 스켈레톤 로딩 애니메이션 */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
 .animated-gradient {
   background: linear-gradient(
     45deg,

@@ -11,7 +11,9 @@ export default function DesignPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const itemsPerPage = 12;
+
 
   // 프로모션 데이터
   const promotionItems = useMemo(() => [
@@ -349,7 +351,11 @@ export default function DesignPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // 페이지 변경 시 상단으로 스크롤
   };
 
-  // 이미지 프리로딩
+  const handleImageLoad = (src: string) => {
+    setLoadedImages(prev => new Set([...prev, src]));
+  };
+
+  // 이미지 프리로딩 및 지연 로딩
   useEffect(() => {
     const preloadImages = () => {
       // 첫 페이지의 이미지들을 프리로드
@@ -357,10 +363,30 @@ export default function DesignPage() {
       firstPageItems.forEach((item) => {
         const img = new window.Image();
         img.src = item.src;
+        img.onload = () => handleImageLoad(item.src);
       });
     };
 
+    // Intersection Observer로 뷰포트에 들어오는 이미지 프리로드
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const imgSrc = entry.target.getAttribute('data-src');
+          if (imgSrc) {
+            const img = new window.Image();
+            img.src = imgSrc;
+            img.onload = () => handleImageLoad(imgSrc);
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px' // 뷰포트 50px 전에 미리 로드
+    });
+
     preloadImages();
+
+    return () => observer.disconnect();
   }, [promotionItems, itemsPerPage]);
 
   // 키보드 네비게이션
@@ -447,14 +473,23 @@ export default function DesignPage() {
                       src={item.src}
                       alt={item.alt}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`object-cover group-hover:scale-105 transition-all duration-500 ${
+                        loadedImages.has(item.src) ? 'opacity-100' : 'opacity-0'
+                      }`}
                       priority={item.id <= 12}
                       loading={item.id <= 12 ? "eager" : "lazy"}
-                      quality={85}
+                      quality={90}
                       sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
                       placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                      blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YzZjRmNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48L3N2Zz4="
+                      onLoad={() => handleImageLoad(item.src)}
                     />
+                    {/* 스켈레톤 로딩 */}
+                    {!loadedImages.has(item.src) && (
+                      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 animate-pulse">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                      </div>
+                    )}
                   </div>
                   <div className="text-center">
                     <h3 className="text-xs sm:text-xs md:text-sm lg:text-lg font-light text-gray-900 mb-0 sm:mb-0.5">{item.title}</h3>
@@ -551,11 +586,11 @@ export default function DesignPage() {
               alt={filteredItems[currentImageIndex]?.alt || "확대된 이미지"}
               width={800}
               height={600}
-              className="rounded-lg shadow-2xl max-w-full max-h-full object-contain"
+              className="rounded-lg shadow-2xl max-w-full max-h-full object-contain transition-opacity duration-300"
               priority
-              quality={90}
+              quality={95}
               placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmM2Y0ZjYiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2U1ZTdlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YzZjRmNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48L3N2Zz4="
             />
           </div>
 
