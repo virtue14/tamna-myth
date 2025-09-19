@@ -57,7 +57,7 @@ export default function Header() {
               탐나는 게임
             </Link>
             <Link 
-              href="/design" 
+              href="/promotion" 
               className="flex items-center gap-2 px-3 lg:px-4 py-2 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300 font-medium text-sm lg:text-base"
             >
               <Images className="h-4 w-4" />
@@ -108,7 +108,7 @@ export default function Header() {
                 탐나는 게임
               </Link>
               <Link 
-                href="/design" 
+                href="/promotion" 
                 className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-all duration-300 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
