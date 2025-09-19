@@ -216,31 +216,22 @@ export default function MythsPage() {
       
       {/* Spacing between header and main content */}
       <div className="pt-16"></div>
-      
-      {/* Page Header */}
-      <header className="container mx-auto px-4 py-6">
-        <h1 className="text-3xl font-bold text-center text-gray-800">제주 신화</h1>
-      </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 pb-16">
+      <main className="container mx-auto px-2 sm:px-4 pb-16">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
-          <section className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-purple-600 to-teal-600 bg-clip-text text-transparent drop-shadow-lg">
+          <section className="text-center mb-8 sm:mb-12 px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 via-purple-600 to-teal-600 bg-clip-text text-transparent drop-shadow-lg">
               제주의 신화 세계
             </h2>
-            <p className="text-xl text-gray-600 mb-6 font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 font-medium">
               제주도의 아름다운 신화들을 만나보세요
-            </p>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              제주 신화의 모든 이야기를 만나보세요.
-              각 신화마다 숨겨진 의미와 현대적 교훈이 담겨있습니다.
             </p>
           </section>
 
           {/* Myths Grid */}
-          <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mb-12 px-2">
             {myths.map((myth) => (
               <FlipCard key={myth.id} myth={myth} />
             ))}

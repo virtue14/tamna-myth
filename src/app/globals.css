@@ -336,3 +336,41 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* 시간 변화 그라데이션 애니메이션 */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    45deg,
+    #ff8c42,
+    #e67e22,
+    #9370db,
+    #663399,
+    #20b2aa,
+    #008b8b,
+    #ff8c42,
+    #e67e22
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

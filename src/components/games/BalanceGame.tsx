@@ -291,34 +291,34 @@ export default function BalanceGame() {
   return (
     <div className="space-y-6">
       {/* 밸런스 게임 제목 */}
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">밸런스 게임</h2>
-        <p className="text-gray-600">두 선택지를 비교해보세요!</p>
+      <div className="text-center px-2">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">밸런스 게임</h2>
+        <p className="text-sm sm:text-base text-gray-600">두 선택지를 비교해보세요!</p>
       </div>
 
       {/* 질문 카드 */}
       <Card className="bg-white/95 backdrop-blur-sm shadow-xl border-2 border-purple-200/50">
         <CardHeader>
-          <CardTitle className="text-center text-xl text-gray-800">밸런스 게임</CardTitle>
+          <CardTitle className="text-center text-lg sm:text-xl text-gray-800">밸런스 게임</CardTitle>
         </CardHeader>
         <CardContent>
           {currentQuestion && (
             <div className="space-y-6">
               {/* 선택지 */}
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 {/* 왼쪽 선택지 */}
-                <div className="p-6 rounded-xl border-2 border-gray-300 bg-white shadow-md">
+                <div className="p-4 sm:p-6 rounded-xl border-2 border-gray-300 bg-white shadow-md">
                   <div className="text-center">
-                    <div className="text-2xl mb-2 text-purple-600 font-bold">A</div>
-                    <div className="font-bold text-lg text-gray-800 leading-relaxed">{currentQuestion.left}</div>
+                    <div className="text-xl sm:text-2xl mb-2 text-purple-600 font-bold">A</div>
+                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed">{currentQuestion.left}</div>
                   </div>
                 </div>
 
                 {/* 오른쪽 선택지 */}
-                <div className="p-6 rounded-xl border-2 border-gray-300 bg-white shadow-md">
+                <div className="p-4 sm:p-6 rounded-xl border-2 border-gray-300 bg-white shadow-md">
                   <div className="text-center">
-                    <div className="text-2xl mb-2 text-purple-600 font-bold">B</div>
-                    <div className="font-bold text-lg text-gray-800 leading-relaxed">{currentQuestion.right}</div>
+                    <div className="text-xl sm:text-2xl mb-2 text-teal-600 font-bold">B</div>
+                    <div className="font-bold text-sm sm:text-base lg:text-lg text-gray-800 leading-relaxed">{currentQuestion.right}</div>
                   </div>
                 </div>
               </div>

@@ -152,11 +152,11 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
       <Header />
       
       {/* Main Content */}
-      <main className="container mx-auto px-4 pt-8 pb-16">
+      <main className="container mx-auto px-2 sm:px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section with Image */}
-          <section className="mb-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <section className="mb-8 sm:mb-12">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
               {/* Image Section */}
               <div className="order-2 lg:order-1">
                 <div className="relative">
@@ -176,7 +176,7 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
                         size="lg" 
                         onClick={isPlaying ? stopVoice : playVoice}
                         disabled={isLoading}
-                        className={`font-medium px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 border ${
+                        className={`font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 border text-sm sm:text-base ${
                           isLoading 
                             ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
                             : isPlaying
@@ -212,36 +212,36 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
               {/* Text Section */}
               <div className="order-1 lg:order-2">
                 <div className="text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 bg-seolmundae-gold text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg mb-6">
-                    {React.createElement(getMythIcon(myth.id), { className: "h-4 w-4" })}
+                  <div className="inline-flex items-center gap-2 bg-seolmundae-gold text-black px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg mb-4 sm:mb-6">
+                    {React.createElement(getMythIcon(myth.id), { className: "h-3 w-3 sm:h-4 sm:w-4" })}
                     {myth.character}
                   </div>
                   
-                  <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-seolmundae-orange-dark via-myth-purple-dark to-myth-teal-dark bg-clip-text text-transparent drop-shadow-lg">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-seolmundae-orange-dark via-myth-purple-dark to-myth-teal-dark bg-clip-text text-transparent drop-shadow-lg">
                     {myth.title}
                   </h1>
                   
-                  <p className="text-xl text-myth-gray-dark mb-8 font-medium leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-myth-gray-dark mb-6 sm:mb-8 font-medium leading-relaxed">
                     {myth.description}
                   </p>
                   
                   {/* Quick Info Cards */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg">
-                      <div className="text-sm text-myth-gray mb-1">성격 유형</div>
-                      <div className="font-bold text-lg text-seolmundae-orange-dark">{myth.mbtiType}</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg">
+                      <div className="text-xs sm:text-sm text-myth-gray mb-1">성격 유형</div>
+                      <div className="font-bold text-sm sm:text-lg text-seolmundae-orange-dark">{myth.mbtiType}</div>
                     </div>
-                    <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg">
-                      <div className="text-sm text-myth-gray mb-1">위치</div>
-                      <div className="font-bold text-lg text-myth-purple-dark">{myth.location}</div>
+                    <div className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg">
+                      <div className="text-xs sm:text-sm text-myth-gray mb-1">위치</div>
+                      <div className="font-bold text-sm sm:text-lg text-myth-purple-dark">{myth.location}</div>
                     </div>
-                    <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg">
-                      <div className="text-sm text-myth-gray mb-1">신화적 의미</div>
-                      <div className="font-bold text-lg text-myth-teal-dark">{myth.meaning}</div>
+                    <div className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg">
+                      <div className="text-xs sm:text-sm text-myth-gray mb-1">신화적 의미</div>
+                      <div className="font-bold text-sm sm:text-lg text-myth-teal-dark">{myth.meaning}</div>
                     </div>
-                    <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg">
-                      <div className="text-sm text-myth-gray mb-1">관련 신화</div>
-                      <div className="font-bold text-lg text-myth-purple-dark">
+                    <div className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl shadow-lg">
+                      <div className="text-xs sm:text-sm text-myth-gray mb-1">관련 신화</div>
+                      <div className="font-bold text-sm sm:text-lg text-myth-purple-dark">
                         {myth.relatedMyths && myth.relatedMyths.length > 0 
                           ? myth.relatedMyths.join(', ') 
                           : '없음'}
@@ -257,10 +257,10 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
           <section className="mb-12">
             <Card className="bg-white/90 backdrop-blur-sm shadow-xl">
               <CardHeader>
-                <CardTitle className="text-2xl text-myth-gray-dark">신화 이야기</CardTitle>
+                <CardTitle className="text-lg sm:text-xl lg:text-2xl text-myth-gray-dark">신화 이야기</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg leading-relaxed text-myth-gray">
+                <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-myth-gray">
                   {myth.story}
                 </p>
               </CardContent>
@@ -272,9 +272,9 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
             <Card className="bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-sm shadow-xl border-2 border-blue-200/50">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-2xl text-myth-gray-dark flex items-center gap-2">
-                    <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
-                      <Sparkles className="h-5 w-5 text-white" />
+                  <CardTitle className="text-lg sm:text-xl lg:text-2xl text-myth-gray-dark flex items-center gap-2">
+                    <div className="p-1.5 sm:p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
+                      <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                     </div>
                     AI 한줄 요약
                     {isSummaryLoading && (
@@ -302,7 +302,7 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
                     <span>AI가 요약을 생성하고 있습니다...</span>
                   </div>
                 ) : (
-                  <p className="text-lg leading-relaxed text-gray-700 font-medium">
+                  <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-700 font-medium">
                     {aiSummary}
                   </p>
                 )}
@@ -314,8 +314,8 @@ export default function MythDetailClient({ myth }: MythDetailClientProps) {
           <section className="text-center">
             <div className="flex justify-center">
               <Link href="/myths">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
-                  <BookOpen className="h-5 w-5 mr-3" />
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-sm sm:text-base">
+                  <BookOpen className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
                   다른 신화 탐험하기
                 </Button>
               </Link>

@@ -462,26 +462,26 @@ export default function MythCharacterPage() {
       
       <div className="pt-16"></div>
 
-      <main className="container mx-auto px-4 pb-16">
+      <main className="container mx-auto px-2 sm:px-4 pb-16">
         <div className="max-w-4xl mx-auto">
           {!isStarted ? (
             // 시작 화면
-            <section className="text-center py-16">
-              <div className="mb-8">
-                <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl w-fit shadow-xl">
-                  <Sparkles className="h-12 w-12 text-white" />
+            <section className="text-center py-8 sm:py-16 px-2">
+              <div className="mb-6 sm:mb-8">
+                <div className="mx-auto mb-4 sm:mb-6 p-4 sm:p-6 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl w-fit shadow-xl">
+                  <Sparkles className="h-8 w-8 sm:h-12 sm:w-12 text-white" />
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent drop-shadow-lg">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent drop-shadow-lg">
                   나의 신화 캐릭터
                 </h1>
-                <p className="text-xl text-gray-600 mb-8 font-medium max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 font-medium max-w-2xl mx-auto leading-relaxed">
                   간단한 질문 10개로 나의 제주 신화 캐릭터를 찾아보세요!
                 </p>
               </div>
               
               <Card className="bg-white/95 backdrop-blur-sm shadow-xl border-2 border-purple-200/50 max-w-2xl mx-auto">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-gray-800">테스트 안내</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl lg:text-2xl text-gray-800">테스트 안내</CardTitle>
                 </CardHeader>
                 <CardContent className="text-left">
                   <ul className="space-y-3 text-gray-600">
@@ -508,7 +508,7 @@ export default function MythCharacterPage() {
               <Button 
                 onClick={handleStart}
                 size="lg" 
-                className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="mt-6 sm:mt-8 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-sm sm:text-base"
               >
                 <Sparkles className="mr-3 h-6 w-6" />
                 테스트 시작하기
@@ -516,9 +516,9 @@ export default function MythCharacterPage() {
             </section>
           ) : result ? (
             // 결과 화면
-            <section className="text-center py-16">
-              <div className="mb-8">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent drop-shadow-lg">
+            <section className="text-center py-8 sm:py-16 px-2">
+              <div className="mb-6 sm:mb-8">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 bg-clip-text text-transparent drop-shadow-lg">
                   당신의 신화 캐릭터
                 </h1>
               </div>
@@ -529,13 +529,13 @@ export default function MythCharacterPage() {
                     <div className={`mx-auto mb-4 p-4 bg-gradient-to-br ${getMythColors(result.id).bg} rounded-2xl w-fit shadow-xl`}>
                       {React.createElement(getMythIcon(result.id), { className: `h-8 w-8 ${getMythColors(result.id).icon}` })}
                     </div>
-                    <CardTitle className="text-3xl text-gray-800 mb-2">{result.name}</CardTitle>
-                    <p className={`text-xl font-bold bg-gradient-to-r ${getMythColors(result.id).accent} bg-clip-text text-transparent`}>{result.title}</p>
+                    <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-gray-800 mb-2">{result.name}</CardTitle>
+                    <p className={`text-base sm:text-lg lg:text-xl font-bold bg-gradient-to-r ${getMythColors(result.id).accent} bg-clip-text text-transparent`}>{result.title}</p>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* 이미지와 설명을 나란히 배치 */}
-                  <div className="grid md:grid-cols-2 gap-8 items-start">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
                     {/* 신 이미지 */}
                     <div className="aspect-[2/3] rounded-3xl overflow-hidden shadow-2xl relative bg-gradient-to-br from-gray-100 to-gray-200">
                       <MythImage 
@@ -550,8 +550,8 @@ export default function MythCharacterPage() {
                     </div>
                     
                     {/* 설명 텍스트와 정보 카드들 */}
-                    <div className="text-center md:text-left space-y-6">
-                      <p className="text-lg text-gray-600 leading-relaxed">
+                    <div className="text-center md:text-left space-y-4 sm:space-y-6">
+                      <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                         {result.description}
                       </p>
                       
@@ -609,14 +609,14 @@ export default function MythCharacterPage() {
             </section>
           ) : (
             // 질문 화면
-            <section className="py-16">
+            <section className="py-8 sm:py-16 px-2">
               {currentQuestion && (
                 <div className="max-w-3xl mx-auto">
                   {/* 진행률 표시 */}
-                  <div className="mb-8">
+                  <div className="mb-6 sm:mb-8">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-gray-600">질문 {currentQuestionIndex + 1} / {selectedQuestions.length}</span>
-                      <span className="text-sm text-gray-600">{Math.round(((currentQuestionIndex + 1) / selectedQuestions.length) * 100)}%</span>
+                      <span className="text-xs sm:text-sm text-gray-600">질문 {currentQuestionIndex + 1} / {selectedQuestions.length}</span>
+                      <span className="text-xs sm:text-sm text-gray-600">{Math.round(((currentQuestionIndex + 1) / selectedQuestions.length) * 100)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div 
@@ -629,7 +629,7 @@ export default function MythCharacterPage() {
                   {/* 질문 카드 */}
                   <Card className="bg-white/95 backdrop-blur-sm shadow-xl border-2 border-purple-200/50 mb-8">
                     <CardHeader>
-                      <CardTitle className="text-2xl text-gray-800 text-center">
+                      <CardTitle className="text-lg sm:text-xl lg:text-2xl text-gray-800 text-center">
                         {currentQuestion.question}
                       </CardTitle>
                     </CardHeader>
@@ -639,7 +639,7 @@ export default function MythCharacterPage() {
                           <button
                             key={optionIndex}
                             onClick={() => handleAnswerSelect(currentQuestion.id, optionIndex)}
-                            className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 ${
+                            className={`w-full p-3 sm:p-4 text-left rounded-xl border-2 transition-all duration-300 text-sm sm:text-base ${
                               answers[currentQuestion.id] === optionIndex
                                 ? 'border-purple-600 bg-purple-100 text-purple-900 shadow-xl ring-2 ring-purple-200'
                                 : 'border-gray-300 bg-white hover:border-purple-400 hover:bg-purple-50 hover:shadow-lg'
