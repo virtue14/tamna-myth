@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -10,9 +10,11 @@ export default function DesignPage() {
   const [selectedCategory, setSelectedCategory] = useState('전체');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 12;
 
   // 프로모션 데이터
-  const promotionItems = [
+  const promotionItems = useMemo(() => [
     {
       id: 1,
       src: '/promotion/홍보포스터1.png',
@@ -108,14 +110,206 @@ export default function DesignPage() {
       title: '돌하르방 맥주 팩',
       description: '맥주 팩',
       category: '맥주'
+    },
+    // 스티커 카테고리
+    {
+      id: 13,
+      src: '/promotion/설문대할망스티커1.png',
+      alt: '설문대할망 스티커 1',
+      title: '설문대할망 스티커 1',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 14,
+      src: '/promotion/설문대할망스티커2.png',
+      alt: '설문대할망 스티커 2',
+      title: '설문대할망 스티커 2',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 15,
+      src: '/promotion/자청비스티커1.png',
+      alt: '자청비 스티커 1',
+      title: '자청비 스티커 1',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 16,
+      src: '/promotion/자청비스티커2.png',
+      alt: '자청비 스티커 2',
+      title: '자청비 스티커 2',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 17,
+      src: '/promotion/돌하르방스티커1.png',
+      alt: '돌하르방 스티커 1',
+      title: '돌하르방 스티커 1',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 18,
+      src: '/promotion/돌하르방스티커2.png',
+      alt: '돌하르방 스티커 2',
+      title: '돌하르방 스티커 2',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 19,
+      src: '/promotion/돌하르방스티커3.png',
+      alt: '돌하르방 스티커 3',
+      title: '돌하르방 스티커 3',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 20,
+      src: '/promotion/삼승할망스티커1.png',
+      alt: '삼승할망 스티커 1',
+      title: '삼승할망 스티커 1',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 21,
+      src: '/promotion/삼승할망스티커2.png',
+      alt: '삼승할망 스티커 2',
+      title: '삼승할망 스티커 2',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 22,
+      src: '/promotion/삼승할망스티커3.png',
+      alt: '삼승할망 스티커 3',
+      title: '삼승할망 스티커 3',
+      description: '스티커',
+      category: '스티커'
+    },
+    {
+      id: 23,
+      src: '/promotion/본향당스티커1.png',
+      alt: '본향당 스티커 1',
+      title: '본향당 스티커 1',
+      description: '스티커',
+      category: '스티커'
+    },
+    // 피규어 카테고리
+    {
+      id: 24,
+      src: '/promotion/설문대할망피규어1.png',
+      alt: '설문대할망 피규어 1',
+      title: '설문대할망 피규어 1',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
+      id: 25,
+      src: '/promotion/자청비피규어1.png',
+      alt: '자청비 피규어 1',
+      title: '자청비 피규어 1',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
+      id: 34,
+      src: '/promotion/자청비피규어2.png',
+      alt: '자청비 피규어 2',
+      title: '자청비 피규어 2',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
+      id: 26,
+      src: '/promotion/돌하르방피규어1.png',
+      alt: '돌하르방 피규어 1',
+      title: '돌하르방 피규어 1',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
+      id: 31,
+      src: '/promotion/돌하르방피규어2.png',
+      alt: '돌하르방 피규어 2',
+      title: '돌하르방 피규어 2',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
+      id: 27,
+      src: '/promotion/삼승할망피규어1.png',
+      alt: '삼승할망 피규어 1',
+      title: '삼승할망 피규어 1',
+      description: '피규어',
+      category: '피규어'
+    },
+    // 추가 소주 패키지
+    {
+      id: 28,
+      src: '/promotion/소주패키지1.png',
+      alt: '소주 패키지 1',
+      title: '소주 패키지 1',
+      description: '소주 팩',
+      category: '소주'
+    },
+    {
+      id: 29,
+      src: '/promotion/소주패키지2.png',
+      alt: '소주 패키지 2',
+      title: '소주 패키지 2',
+      description: '소주 팩',
+      category: '소주'
+    },
+    {
+      id: 30,
+      src: '/promotion/소주패키지3.png',
+      alt: '소주 패키지 3',
+      title: '소주 패키지 3',
+      description: '소주 팩',
+      category: '소주'
+    },
+    // 추가 소주 제품
+    {
+      id: 32,
+      src: '/promotion/설문대할망소주.png',
+      alt: '설문대할망 소주',
+      title: '설문대할망 소주',
+      description: '소주',
+      category: '소주'
+    },
+    {
+      id: 33,
+      src: '/promotion/자청비소주.png',
+      alt: '자청비 소주',
+      title: '자청비 소주',
+      description: '소주',
+      category: '소주'
     }
-  ];
+  ], []);
 
   const categories = ['전체', '소주', '맥주', '포스터', '스티커', '피규어'];
 
   const filteredItems = selectedCategory === '전체' 
     ? promotionItems 
     : promotionItems.filter(item => item.category === selectedCategory);
+
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = filteredItems.slice(startIndex, endIndex);
+
+  // 카테고리별 개수 계산
+  const getCategoryCount = (category: string) => {
+    if (category === '전체') return promotionItems.length;
+    return promotionItems.filter(item => item.category === category).length;
+  };
 
   const handleImageClick = (src: string) => {
     const index = filteredItems.findIndex(item => item.src === src);
@@ -144,6 +338,30 @@ export default function DesignPage() {
     setCurrentImageIndex(index);
     setSelectedImage(filteredItems[index].src);
   };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1); // 카테고리 변경 시 첫 페이지로 이동
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // 페이지 변경 시 상단으로 스크롤
+  };
+
+  // 이미지 프리로딩
+  useEffect(() => {
+    const preloadImages = () => {
+      // 첫 페이지의 이미지들을 프리로드
+      const firstPageItems = promotionItems.slice(0, itemsPerPage);
+      firstPageItems.forEach((item) => {
+        const img = new window.Image();
+        img.src = item.src;
+      });
+    };
+
+    preloadImages();
+  }, [promotionItems, itemsPerPage]);
 
   // 키보드 네비게이션
   useEffect(() => {
@@ -203,14 +421,14 @@ export default function DesignPage() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-purple-600 text-white shadow-lg'
                       : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 shadow-sm'
                   }`}
                 >
-                  {category}
+                  {category} ({getCategoryCount(category)})
                 </button>
               ))}
             </div>
@@ -218,11 +436,11 @@ export default function DesignPage() {
 
           {/* Promotion Gallery */}
           <section className="mb-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-              {filteredItems.map((item) => (
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-1 sm:gap-2 md:gap-3 lg:gap-4">
+              {currentItems.map((item) => (
                 <div key={item.id} className="group cursor-pointer">
                   <div 
-                    className="relative overflow-hidden bg-white aspect-[3/4] mb-4 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-lg"
+                    className="relative overflow-hidden bg-white aspect-[3/4] mb-0.5 sm:mb-1 md:mb-2 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-lg"
                     onClick={() => handleImageClick(item.src)}
                   >
                     <Image
@@ -230,16 +448,69 @@ export default function DesignPage() {
                       alt={item.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      priority={item.id <= 12}
+                      loading={item.id <= 12 ? "eager" : "lazy"}
+                      quality={85}
+                      sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-lg sm:text-xl font-light text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-600 mb-3 font-light">{item.description}</p>
+                    <h3 className="text-xs sm:text-xs md:text-sm lg:text-lg font-light text-gray-900 mb-0 sm:mb-0.5">{item.title}</h3>
+                    <p className="text-xs sm:text-xs md:text-sm text-gray-600 mb-0.5 sm:mb-1 font-light">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </section>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <section className="mb-12">
+              <div className="flex justify-center items-center gap-2">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    currentPage === 1
+                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 shadow-sm'
+                  }`}
+                >
+                  이전
+                </button>
+                
+                <div className="flex gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        currentPage === page
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 shadow-sm'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
+                
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    currentPage === totalPages
+                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 shadow-sm'
+                  }`}
+                >
+                  다음
+                </button>
+              </div>
+            </section>
+          )}
 
         </div>
       </main>
@@ -281,6 +552,10 @@ export default function DesignPage() {
               width={800}
               height={600}
               className="rounded-lg shadow-2xl max-w-full max-h-full object-contain"
+              priority
+              quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
             />
           </div>
 
@@ -313,6 +588,9 @@ export default function DesignPage() {
                     width={64}
                     height={64}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    quality={60}
+                    sizes="64px"
                   />
                 </button>
               ))}
