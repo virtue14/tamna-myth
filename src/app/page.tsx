@@ -6,14 +6,10 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useEffect } from 'react';
-import { registerServiceWorker } from '@/lib/sw-register';
 
 export default function Home() {
-  // 모든 신화 이미지 프리로딩 및 Service Worker 등록
+  // 모든 신화 이미지 프리로딩
   useEffect(() => {
-    // Service Worker 등록
-    registerServiceWorker();
-    
     // 모든 신화 이미지 프리로딩
     const mythImages = [
       '/images/설문대할망.png',
