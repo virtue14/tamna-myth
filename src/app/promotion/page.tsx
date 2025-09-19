@@ -286,7 +286,7 @@ export default function DesignPage() {
     },
     // 추가 소주 제품
     {
-      id: 32,
+      id: 35,
       src: '/promotion/설문대할망소주.png',
       alt: '설문대할망 소주',
       title: '설문대할망 소주',
