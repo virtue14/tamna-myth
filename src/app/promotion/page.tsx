@@ -244,6 +244,14 @@ export default function DesignPage() {
       category: '피규어'
     },
     {
+      id: 32,
+      src: '/promotion/돌하르방피규어3.png',
+      alt: '돌하르방 피규어 3',
+      title: '돌하르방 피규어 3',
+      description: '피규어',
+      category: '피규어'
+    },
+    {
       id: 27,
       src: '/promotion/삼승할망피규어1.png',
       alt: '삼승할망 피규어 1',
