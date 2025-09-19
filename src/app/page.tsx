@@ -1,10 +1,39 @@
+'use client';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mountain, Sparkles, Gamepad2, Images, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useEffect } from 'react';
+import { registerServiceWorker } from '@/lib/sw-register';
 
 export default function Home() {
+  // 모든 신화 이미지 프리로딩 및 Service Worker 등록
+  useEffect(() => {
+    // Service Worker 등록
+    registerServiceWorker();
+    
+    // 모든 신화 이미지 프리로딩
+    const mythImages = [
+      '/images/설문대할망.png',
+      '/images/삼승할망.png',
+      '/images/자청비.png',
+      '/images/본향당 신화(마을 수호신).png',
+      '/images/영등할망.png',
+      '/images/해신(용왕 전설).png',
+      '/images/문도령.png',
+      '/images/세경본풀이.png',
+      '/images/돌하르방(장승).png',
+      '/images/칠성신.png'
+    ];
+
+    mythImages.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <div className="min-h-screen brand-gradient">
       <Header />

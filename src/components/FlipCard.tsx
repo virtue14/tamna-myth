@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import MythImage from './MythImage';
 import { Sparkles, Mountain, Heart, Waves, Shield, Star, Crown, ArrowRight, Eye } from 'lucide-react';
@@ -134,6 +134,16 @@ export default function FlipCard({ myth }: FlipCardProps) {
   React.useEffect(() => {
     localStorage.setItem(`card-flipped-${myth.id}`, isFlipped.toString());
   }, [isFlipped, myth.id]);
+
+  // 이미지 프리로딩
+  useEffect(() => {
+    const preloadImage = () => {
+      const img = new window.Image();
+      img.src = myth.image;
+    };
+    
+    preloadImage();
+  }, [myth.image]);
 
   // 데스크톱: 마우스 호버로 플립 (모바일에서는 비활성화)
   const handleMouseEnter = () => {

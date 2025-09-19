@@ -11,7 +11,7 @@ export default function Footer() {
             © 2025 탐나는 신화
           </p>
           <p className="text-myth-cream-light text-xs mt-1 opacity-75">
-            제주 신화 소주와 함께하는 특별한 경험
+            제주 신화와 함께하는 특별한 경험
           </p>
         </div>
 

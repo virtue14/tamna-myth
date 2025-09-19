@@ -68,17 +68,17 @@ export default function DesignPage() {
     {
       id: 7,
       src: '/promotion/설문대할망소주패키지.png',
-      alt: '설문대할망 소주 팩',
-      title: '설문대할망 소주 팩',
-      description: '소주 팩',
+      alt: '설문대할망 소주 패키지',
+      title: '설문대할망 소주 패키지',
+      description: '소주 패키지',
       category: '소주'
     },
     {
       id: 8,
       src: '/promotion/자청비소주패키지.png',
-      alt: '자청비 소주 팩',
-      title: '자청비 소주 팩',
-      description: '소주 팩',
+      alt: '자청비 소주 패키지',
+      title: '자청비 소주 패키지',
+      description: '소주 패키지',
       category: '소주'
     },
     {
@@ -100,17 +100,17 @@ export default function DesignPage() {
     {
       id: 11,
       src: '/promotion/설문대할망맥주패키지.png',
-      alt: '설문대할망 맥주 팩',
-      title: '설문대할망 맥주 팩',
-      description: '맥주 팩',
+      alt: '설문대할망 맥주 패키지',
+      title: '설문대할망 맥주 패키지',
+      description: '맥주 패키지',
       category: '맥주'
     },
     {
       id: 12,
       src: '/promotion/돌하르방맥주패키지.png',
-      alt: '돌하르방 맥주 팩',
-      title: '돌하르방 맥주 팩',
-      description: '맥주 팩',
+      alt: '돌하르방 맥주 패키지',
+      title: '돌하르방 맥주 패키지',
+      description: '맥주 패키지',
       category: '맥주'
     },
     // 스티커 카테고리
@@ -265,7 +265,7 @@ export default function DesignPage() {
       src: '/promotion/소주패키지1.png',
       alt: '소주 패키지 1',
       title: '소주 패키지 1',
-      description: '소주 팩',
+      description: '소주 패키지',
       category: '소주'
     },
     {
@@ -273,7 +273,7 @@ export default function DesignPage() {
       src: '/promotion/소주패키지2.png',
       alt: '소주 패키지 2',
       title: '소주 패키지 2',
-      description: '소주 팩',
+      description: '소주 패키지',
       category: '소주'
     },
     {
@@ -281,7 +281,7 @@ export default function DesignPage() {
       src: '/promotion/소주패키지3.png',
       alt: '소주 패키지 3',
       title: '소주 패키지 3',
-      description: '소주 팩',
+      description: '소주 패키지',
       category: '소주'
     },
     // 추가 소주 제품

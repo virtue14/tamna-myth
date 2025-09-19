@@ -201,8 +201,19 @@ export default function MythsPage() {
       sessionStorage.setItem('myths-scroll-position', window.scrollY.toString());
     };
 
+    // 모든 신화 이미지 프리로딩
+    const preloadImages = () => {
+      myths.forEach((myth) => {
+        const img = new window.Image();
+        img.src = myth.image;
+      });
+    };
+
     window.addEventListener('beforeunload', handleBeforeUnload);
     window.addEventListener('popstate', handlePopState);
+    
+    // 페이지 로드 시 이미지 프리로딩
+    preloadImages();
 
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);

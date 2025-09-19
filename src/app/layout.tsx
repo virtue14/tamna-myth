@@ -32,6 +32,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* Critical Resource Hints for instant loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload critical images */}
+        <link rel="preload" as="image" href="/images/설문대할망.png" />
+        <link rel="preload" as="image" href="/images/삼승할망.png" />
+        <link rel="preload" as="image" href="/images/자청비.png" />
+        <link rel="preload" as="image" href="/images/본향당 신화(마을 수호신).png" />
+        <link rel="preload" as="image" href="/images/영등할망.png" />
+        <link rel="preload" as="image" href="/images/해신(용왕 전설).png" />
+        <link rel="preload" as="image" href="/images/문도령.png" />
+        <link rel="preload" as="image" href="/images/세경본풀이.png" />
+        <link rel="preload" as="image" href="/images/돌하르방(장승).png" />
+        <link rel="preload" as="image" href="/images/칠성신.png" />
+        
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="//api.openai.com" />
+        
+        {/* Prefetch critical pages */}
+        <link rel="prefetch" href="/myths" />
+        <link rel="prefetch" href="/myth-character" />
+        <link rel="prefetch" href="/games" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
