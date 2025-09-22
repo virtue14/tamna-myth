@@ -19,7 +19,7 @@ export default function DesignPage() {
   const promotionItems = useMemo(() => [
     {
       id: 1,
-      src: '/promotion/홍보포스터1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A695a803c-826e-4f3f-a6dc-6cbf2e389e85%3A%E1%84%92%E1%85%A9%E1%86%BC%E1%84%87%E1%85%A9%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A51.png?table=block&id=27610da3-ad82-801a-9996-ce74244054dd&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=470&userId=&cache=v2',
       alt: '홍보포스터 1',
       title: '홍보포스터 1',
       description: '포스터',
@@ -27,7 +27,7 @@ export default function DesignPage() {
     },
     {
       id: 2,
-      src: '/promotion/홍보포스터2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A781917a4-0a91-49af-82e4-ef5480d4b0c3%3A%E1%84%92%E1%85%A9%E1%86%BC%E1%84%87%E1%85%A9%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A52.png?table=block&id=27610da3-ad82-8023-b06b-d7637a87f504&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=470&userId=&cache=v2',
       alt: '홍보포스터 2',
       title: '홍보포스터 2',
       description: '포스터',
@@ -35,7 +35,7 @@ export default function DesignPage() {
     },
     {
       id: 3,
-      src: '/promotion/설문대할망라벨.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A8ded09e6-cf0b-4a49-bb6d-673642efe9a8%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%85%E1%85%A1%E1%84%87%E1%85%A6%E1%86%AF.png?table=block&id=27610da3-ad82-8020-b347-d8003cfd2134&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '설문대할망 라벨',
       title: '설문대할망 라벨',
       description: '소주 라벨',
@@ -43,7 +43,7 @@ export default function DesignPage() {
     },
     {
       id: 4,
-      src: '/promotion/자청비라벨.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A31f37877-8b52-4239-9227-14beba6f0b9b%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%85%E1%85%A1%E1%84%87%E1%85%A6%E1%86%AF.png?table=block&id=27610da3-ad82-800f-9790-e53627e37da6&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '자청비 라벨',
       title: '자청비 라벨',
       description: '소주 라벨',
@@ -51,7 +51,7 @@ export default function DesignPage() {
     },
     {
       id: 5,
-      src: '/promotion/설문대할망소주잔.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A0775b0f2-d895-48e1-8341-fb96e9498429%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%8C%E1%85%A1%E1%86%AB.png?table=block&id=27610da3-ad82-80f6-8f9a-cbe0bdb6a01e&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 소주잔',
       title: '설문대할망 소주잔',
       description: '전용 잔',
@@ -59,7 +59,7 @@ export default function DesignPage() {
     },
     {
       id: 6,
-      src: '/promotion/자청비소주잔.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Afcfc74f5-d1f7-448d-924d-9d266dc8b618%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%8C%E1%85%A1%E1%86%AB.png?table=block&id=27610da3-ad82-80d6-9e1a-d91368fc3d96&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 소주잔',
       title: '자청비 소주잔',
       description: '전용 잔',
@@ -67,7 +67,7 @@ export default function DesignPage() {
     },
     {
       id: 7,
-      src: '/promotion/설문대할망소주패키지.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A076c4c0b-eb29-43c2-b1b9-f02570275620%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5.png?table=block&id=27610da3-ad82-80f1-b14e-c520338dfd2f&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '설문대할망 소주 패키지',
       title: '설문대할망 소주 패키지',
       description: '소주 패키지',
@@ -75,7 +75,7 @@ export default function DesignPage() {
     },
     {
       id: 8,
-      src: '/promotion/자청비소주패키지.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Aee20e000-7943-4cf0-87cf-76ef1d1acffa%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5.png?table=block&id=27610da3-ad82-8068-a21e-f44509cb11d1&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 소주 패키지',
       title: '자청비 소주 패키지',
       description: '소주 패키지',
@@ -83,7 +83,7 @@ export default function DesignPage() {
     },
     {
       id: 9,
-      src: '/promotion/설문대할망맥주.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Abd0f9a1a-c010-4530-8392-9fd7a7b6a414%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%86%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE.png?table=block&id=27610da3-ad82-8068-a36d-f382b63c27d9&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 맥주',
       title: '설문대할망 맥주',
       description: '맥주',
@@ -91,7 +91,7 @@ export default function DesignPage() {
     },
     {
       id: 10,
-      src: '/promotion/돌하르방맥주.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Aa6a7d82b-f9c4-4388-b6fd-1ecc8bd2f02f%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%86%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE.png?table=block&id=27610da3-ad82-8059-a93d-e4f8c5316c1f&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '돌하르방 맥주',
       title: '돌하르방 맥주',
       description: '맥주',
@@ -99,7 +99,7 @@ export default function DesignPage() {
     },
     {
       id: 11,
-      src: '/promotion/설문대할망맥주패키지.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A518ca322-6222-4bbf-b31c-5a05d0a5327f%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%86%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5.png?table=block&id=27610da3-ad82-800f-8e86-fe037d229330&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 맥주 패키지',
       title: '설문대할망 맥주 패키지',
       description: '맥주 패키지',
@@ -107,7 +107,7 @@ export default function DesignPage() {
     },
     {
       id: 12,
-      src: '/promotion/돌하르방맥주패키지.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A1b4d1288-1cf5-48ea-93d4-bcf7b65193a7%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%86%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5.png?table=block&id=27610da3-ad82-80ee-b522-cf1bf417f56a&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '돌하르방 맥주 패키지',
       title: '돌하르방 맥주 패키지',
       description: '맥주 패키지',
@@ -116,7 +116,7 @@ export default function DesignPage() {
     // 스티커 카테고리
     {
       id: 13,
-      src: '/promotion/설문대할망스티커1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Ae09cec6f-6f41-4d30-a307-5f3da3299674%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A51.png?table=block&id=27610da3-ad82-80ae-9b2a-f1b8bccb498b&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 스티커 1',
       title: '설문대할망 스티커 1',
       description: '스티커',
@@ -124,7 +124,7 @@ export default function DesignPage() {
     },
     {
       id: 14,
-      src: '/promotion/설문대할망스티커2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Afdaca273-3305-40ae-a40b-7bcdbd4c6dfc%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A52.png?table=block&id=27610da3-ad82-80e9-85fd-f7f6b2765799&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 스티커 2',
       title: '설문대할망 스티커 2',
       description: '스티커',
@@ -132,7 +132,7 @@ export default function DesignPage() {
     },
     {
       id: 15,
-      src: '/promotion/자청비스티커1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A741368b6-7089-4ddc-a092-ebef4e23fec5%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A51.png?table=block&id=27610da3-ad82-8041-8227-fa6b7baf9983&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 스티커 1',
       title: '자청비 스티커 1',
       description: '스티커',
@@ -140,7 +140,7 @@ export default function DesignPage() {
     },
     {
       id: 16,
-      src: '/promotion/자청비스티커2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A8e2405f5-b974-42aa-9d9a-2d7f8ebd5125%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A52.png?table=block&id=27610da3-ad82-804f-8021-d176ec9ae937&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 스티커 2',
       title: '자청비 스티커 2',
       description: '스티커',
@@ -148,7 +148,7 @@ export default function DesignPage() {
     },
     {
       id: 17,
-      src: '/promotion/돌하르방스티커1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A96ac3e47-21bd-4883-aea7-93efa9534e8f%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A51.png?table=block&id=27610da3-ad82-8017-811d-cbb911b1d2ef&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '돌하르방 스티커 1',
       title: '돌하르방 스티커 1',
       description: '스티커',
@@ -156,7 +156,7 @@ export default function DesignPage() {
     },
     {
       id: 18,
-      src: '/promotion/돌하르방스티커2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A42d2d0db-3bfa-4caa-94af-7cabe2c9df28%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A52.png?table=block&id=27610da3-ad82-80fc-8036-d2a92a690b2e&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '돌하르방 스티커 2',
       title: '돌하르방 스티커 2',
       description: '스티커',
@@ -164,7 +164,7 @@ export default function DesignPage() {
     },
     {
       id: 19,
-      src: '/promotion/돌하르방스티커3.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A7f270f1f-13b0-4da0-88f2-89f14d15be6b%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A53.png?table=block&id=27610da3-ad82-8024-b3d4-dfd03cb6a2ad&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '돌하르방 스티커 3',
       title: '돌하르방 스티커 3',
       description: '스티커',
@@ -172,7 +172,7 @@ export default function DesignPage() {
     },
     {
       id: 20,
-      src: '/promotion/삼승할망스티커1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A7d01a197-b3f3-4fa7-a50c-52117db58a05%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A51.png?table=block&id=27610da3-ad82-809c-9a17-e340a458530c&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '삼승할망 스티커 1',
       title: '삼승할망 스티커 1',
       description: '스티커',
@@ -180,7 +180,7 @@ export default function DesignPage() {
     },
     {
       id: 21,
-      src: '/promotion/삼승할망스티커2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Ac9003bfd-2509-42db-8131-9ceb97064ff8%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A52.png?table=block&id=27610da3-ad82-8071-a892-da842b68fa54&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '삼승할망 스티커 2',
       title: '삼승할망 스티커 2',
       description: '스티커',
@@ -188,7 +188,7 @@ export default function DesignPage() {
     },
     {
       id: 22,
-      src: '/promotion/삼승할망스티커3.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A44a3fef7-be1c-4423-ba0f-99323e0c30f3%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A53.png?table=block&id=27610da3-ad82-80ac-a460-cd62aadacdc8&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '삼승할망 스티커 3',
       title: '삼승할망 스티커 3',
       description: '스티커',
@@ -196,7 +196,7 @@ export default function DesignPage() {
     },
     {
       id: 23,
-      src: '/promotion/본향당스티커1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A5a758323-07ba-4447-87a1-5e676382dae6%3A%E1%84%87%E1%85%A9%E1%86%AB%E1%84%92%E1%85%A3%E1%86%BC%E1%84%83%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%84%90%E1%85%B5%E1%84%8F%E1%85%A51.png?table=block&id=27610da3-ad82-8066-87f2-d1a6bb6e17a9&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '본향당 스티커 1',
       title: '본향당 스티커 1',
       description: '스티커',
@@ -205,7 +205,7 @@ export default function DesignPage() {
     // 피규어 카테고리
     {
       id: 24,
-      src: '/promotion/설문대할망피규어1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Afe8ab72a-178e-4721-bbb6-59480a3e24c2%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A51.png?table=block&id=27610da3-ad82-80b5-8619-ec1c1fe9652b&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 피규어 1',
       title: '설문대할망 피규어 1',
       description: '피규어',
@@ -213,7 +213,7 @@ export default function DesignPage() {
     },
     {
       id: 25,
-      src: '/promotion/자청비피규어1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A05ae7289-9c40-405a-8fe4-c693d11407fc%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A51.png?table=block&id=27610da3-ad82-80a2-9fe8-ce2dee0477b2&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '자청비 피규어 1',
       title: '자청비 피규어 1',
       description: '피규어',
@@ -221,7 +221,7 @@ export default function DesignPage() {
     },
     {
       id: 34,
-      src: '/promotion/자청비피규어2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A2d13c763-d8bf-4cee-b4d8-c14749c9221e%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A52.png?table=block&id=27610da3-ad82-8050-b0c9-c9b005fae17e&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 피규어 2',
       title: '자청비 피규어 2',
       description: '피규어',
@@ -229,7 +229,7 @@ export default function DesignPage() {
     },
     {
       id: 26,
-      src: '/promotion/돌하르방피규어1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Afdccdf3e-c221-4498-be9d-8f1e5157e5e0%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A51.png?table=block&id=27610da3-ad82-80b2-8e43-cffa3240206e&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '돌하르방 피규어 1',
       title: '돌하르방 피규어 1',
       description: '피규어',
@@ -237,7 +237,7 @@ export default function DesignPage() {
     },
     {
       id: 31,
-      src: '/promotion/돌하르방피규어2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Ae87bf1ce-bcec-456c-9612-f37b8c1c3570%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A52.png?table=block&id=27610da3-ad82-80b5-ad37-e12138622704&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '돌하르방 피규어 2',
       title: '돌하르방 피규어 2',
       description: '피규어',
@@ -245,7 +245,7 @@ export default function DesignPage() {
     },
     {
       id: 32,
-      src: '/promotion/돌하르방피규어3.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Ad1ab0a99-243b-456d-acbb-b977682815d2%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A53.png?table=block&id=27610da3-ad82-8045-b3f3-c1feba87912e&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
       alt: '돌하르방 피규어 3',
       title: '돌하르방 피규어 3',
       description: '피규어',
@@ -253,7 +253,7 @@ export default function DesignPage() {
     },
     {
       id: 27,
-      src: '/promotion/삼승할망피규어1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A05aa8ac4-d1b2-4824-99ac-2e6515c2f41c%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%91%E1%85%B5%E1%84%80%E1%85%B2%E1%84%8B%E1%85%A51.png?table=block&id=27610da3-ad82-8024-81e3-eb25096b0d77&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '삼승할망 피규어 1',
       title: '삼승할망 피규어 1',
       description: '피규어',
@@ -262,7 +262,7 @@ export default function DesignPage() {
     // 추가 소주 패키지
     {
       id: 28,
-      src: '/promotion/소주패키지1.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A29ffab88-908a-419f-a5f8-d482a5a0ec3b%3A%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B51.png?table=block&id=27610da3-ad82-80ef-9534-d4a9b5eeaeee&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '소주 패키지 1',
       title: '소주 패키지 1',
       description: '소주 패키지',
@@ -270,7 +270,7 @@ export default function DesignPage() {
     },
     {
       id: 29,
-      src: '/promotion/소주패키지2.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Ada79052f-925a-46c4-97ed-a722ca557d2b%3A%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B53.png?table=block&id=27610da3-ad82-8042-b034-d489fab13608&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '소주 패키지 2',
       title: '소주 패키지 2',
       description: '소주 패키지',
@@ -278,7 +278,7 @@ export default function DesignPage() {
     },
     {
       id: 30,
-      src: '/promotion/소주패키지3.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Abce1d8ff-bd2a-47c2-a0c0-217f2d14c8ac%3A%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B52.png?table=block&id=27610da3-ad82-80ee-b9e3-d8fa4d9903e4&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '소주 패키지 3',
       title: '소주 패키지 3',
       description: '소주 패키지',
@@ -287,7 +287,7 @@ export default function DesignPage() {
     // 추가 소주 제품
     {
       id: 35,
-      src: '/promotion/설문대할망소주.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3Acd96abc0-6ec2-4680-bcbc-862cceec6b04%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE.png?table=block&id=27610da3-ad82-80be-bc45-f7c72a5fd37a&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '설문대할망 소주',
       title: '설문대할망 소주',
       description: '소주',
@@ -295,7 +295,7 @@ export default function DesignPage() {
     },
     {
       id: 33,
-      src: '/promotion/자청비소주.png',
+      src: 'https://gdpark-official.notion.site/image/attachment%3A51e93859-51c8-4ba4-a2cc-aef8feda3dae%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5%E1%84%89%E1%85%A9%E1%84%8C%E1%85%AE.png?table=block&id=27610da3-ad82-8090-b4f6-c0f75c4ba319&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
       alt: '자청비 소주',
       title: '자청비 소주',
       description: '소주',
@@ -305,8 +305,8 @@ export default function DesignPage() {
 
   const categories = ['전체', '소주', '맥주', '포스터', '스티커', '피규어'];
 
-  const filteredItems = selectedCategory === '전체' 
-    ? promotionItems 
+  const filteredItems = selectedCategory === '전체'
+    ? promotionItems
     : promotionItems.filter(item => item.category === selectedCategory);
 
   // 페이지네이션 계산
@@ -325,12 +325,12 @@ export default function DesignPage() {
     const index = filteredItems.findIndex(item => item.src === src);
     setCurrentImageIndex(index);
     setSelectedImage(src);
-    
+
     // 모달에서 사용할 이미지들을 미리 로드
     const preloadModalImages = () => {
       const prevIndex = index > 0 ? index - 1 : filteredItems.length - 1;
       const nextIndex = index < filteredItems.length - 1 ? index + 1 : 0;
-      
+
       [filteredItems[prevIndex]?.src, filteredItems[nextIndex]?.src].forEach((imageSrc) => {
         if (imageSrc) {
           const img = new window.Image();
@@ -338,7 +338,7 @@ export default function DesignPage() {
         }
       });
     };
-    
+
     preloadModalImages();
   };
 
@@ -351,7 +351,7 @@ export default function DesignPage() {
     const prevIndex = currentImageIndex > 0 ? currentImageIndex - 1 : filteredItems.length - 1;
     setCurrentImageIndex(prevIndex);
     setSelectedImage(filteredItems[prevIndex].src);
-    
+
     // 다음 이미지도 미리 로드
     const nextIndex = prevIndex < filteredItems.length - 1 ? prevIndex + 1 : 0;
     const img = new window.Image();
@@ -362,7 +362,7 @@ export default function DesignPage() {
     const nextIndex = currentImageIndex < filteredItems.length - 1 ? currentImageIndex + 1 : 0;
     setCurrentImageIndex(nextIndex);
     setSelectedImage(filteredItems[nextIndex].src);
-    
+
     // 이전 이미지도 미리 로드
     const prevIndex = nextIndex > 0 ? nextIndex - 1 : filteredItems.length - 1;
     const img = new window.Image();
@@ -426,7 +426,7 @@ export default function DesignPage() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (!selectedImage) return;
-      
+
       switch (event.key) {
         case 'Escape':
           closeModal();
@@ -447,14 +447,14 @@ export default function DesignPage() {
   return (
     <div className="min-h-screen brand-gradient">
       <Header />
-      
+
       {/* Spacing between header and main content */}
       <div className="pt-16"></div>
 
       {/* Main Content */}
       <main className="container mx-auto px-2 sm:px-4 pb-16">
         <div className="max-w-6xl mx-auto">
-          
+
           {/* Hero Section */}
           <section className="text-center mb-8 sm:mb-12 px-2">
             <div className="mb-6 sm:mb-8">
@@ -498,7 +498,7 @@ export default function DesignPage() {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-1 sm:gap-2 md:gap-3 lg:gap-4">
               {currentItems.map((item) => (
                 <div key={item.id} className="group">
-                  <div 
+                  <div
                     className="relative overflow-hidden bg-white aspect-[3/4] mb-0.5 sm:mb-1 md:mb-2 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-lg cursor-pointer"
                     onClick={() => handleImageClick(item.src)}
                   >
@@ -548,7 +548,7 @@ export default function DesignPage() {
                 >
                   이전
                 </button>
-                
+
                 <div className="flex gap-1">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
@@ -564,7 +564,7 @@ export default function DesignPage() {
                     </button>
                   ))}
                 </div>
-                
+
                 <button
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}

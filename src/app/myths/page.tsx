@@ -14,7 +14,7 @@ const myths = [
     description: '한라산과 오름을 만든 거인 여신의 전설을 만나보세요.',
     story: '설문대할망은 치마폭에 흙을 담아 제주 땅을 다지고, 한라산과 수많은 오름을 만들었다고 전해집니다.',
     meaning: '창조와 생명, 자연의 위대함을 상징합니다.',
-    image: '/images/설문대할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A71b6fa9b-e1a2-42d9-9d48-b4e1a6586a18%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-8084-a49c-dc132e6ac241&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
     iconName: 'Mountain',
     color: 'orange',
     bgColor: 'from-orange-400 to-orangee-600',
@@ -31,7 +31,7 @@ const myths = [
     description: '아기를 점지하고 출산을 돕는 생명의 신을 만나보세요.',
     story: '삼승할망은 집안의 출산과 아기의 생명을 돌보며, 제주 가정에서 출산 제의의 중심이 되었습니다.',
     meaning: '생명, 탄생, 모성애를 상징합니다.',
-    image: '/images/삼승할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A5d7cda96-ec7b-4cea-aa2f-d4c6b8a5f546%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-8082-8c0f-e492f14d5b13&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
     iconName: 'Users',
     color: 'purple',
     bgColor: 'from-purple-500 to-purple-700',
@@ -48,7 +48,7 @@ const myths = [
     description: '농사와 곡식을 풍요롭게 지켜주는 여신을 만나보세요.',
     story: '자청비는 곡식과 풍요를 관장하며, 인간들에게 농사짓는 방법과 풍요의 축복을 내려주었다고 전해집니다.',
     meaning: '풍요, 성장, 번영을 상징합니다.',
-    image: '/images/자청비.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Ac5b71d94-8575-4616-a1e0-32ac6818fbcb%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5.png?table=block&id=27610da3-ad82-8068-abb2-ea9a576fcdfb&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2',
     iconName: 'Sparkles',
     color: 'teal',
     bgColor: 'from-teal-500 to-teal-700',
@@ -65,7 +65,7 @@ const myths = [
     description: '마을마다 존재하는 토속 수호신을 만나보세요.',
     story: '본향당 신은 마을마다 모셔져 마을 사람들의 평안과 안전을 지켜주며, 공동체 결속을 다지는 중심이 되었습니다.',
     meaning: '안전, 공동체, 전통을 상징합니다.',
-    image: '/images/본향당 신화(마을 수호신).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A58e9714f-5a6e-4445-a347-40b6054c2b06%3A%E1%84%87%E1%85%A9%E1%86%AB%E1%84%92%E1%85%A3%E1%86%BC%E1%84%83%E1%85%A1%E1%86%BC_%E1%84%89%E1%85%B5%E1%86%AB%E1%84%92%E1%85%AA(%E1%84%86%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AF_%E1%84%89%E1%85%AE%E1%84%92%E1%85%A9%E1%84%89%E1%85%B5%E1%86%AB).png?table=block&id=27610da3-ad82-8090-8250-fd4d32051887&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Mountain',
     color: 'green',
     bgColor: 'from-green-500 to-green-700',
@@ -82,7 +82,7 @@ const myths = [
     description: '2월에 바다를 다스리러 내려오는 바람과 바다의 신을 만나보세요.',
     story: '영등할망은 매년 음력 2월 제주 바다를 찾아 풍어와 안전을 기원하는 제의의 주신이 되었습니다.',
     meaning: '자연 주기, 바람, 어업의 안녕을 상징합니다.',
-    image: '/images/영등할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A977df292-30a3-4c78-9fc3-a526a66b55a9%3A%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%83%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-801f-bb1b-e8c8e56862d6&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Sparkles',
     color: 'blue',
     bgColor: 'from-blue-500 to-blue-700',
@@ -99,7 +99,7 @@ const myths = [
     description: '어업과 해양을 지키는 바다의 신을 만나보세요.',
     story: '해신은 용왕으로도 불리며, 어업의 풍요와 바다의 질서를 지켜주는 존재로 신앙되었습니다.',
     meaning: '질서, 권위, 풍요를 상징합니다.',
-    image: '/images/해신(용왕 전설).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Aac02e034-63c2-4289-add3-940372dfdee4%3A%E1%84%92%E1%85%A2%E1%84%89%E1%85%B5%E1%86%AB(%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8B%E1%85%AA%E1%86%BC_%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%AF).png?table=block&id=27610da3-ad82-80d8-ab8d-ebfb757fabdc&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Users',
     color: 'cyan',
     bgColor: 'from-cyan-500 to-cyan-700',
@@ -116,7 +116,7 @@ const myths = [
     description: '인간과 선녀의 비극적 사랑 이야기를 만나보세요.',
     story: '문도령은 선녀와의 사랑으로 인간과 신의 경계를 넘었으나, 결국 비극적 결말을 맞이한 주인공입니다.',
     meaning: '사랑, 열정, 비극을 상징합니다.',
-    image: '/images/문도령.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A842a5830-1708-4b04-abdb-1655df672d22%3A%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A9%E1%84%85%E1%85%A7%E1%86%BC.png?table=block&id=27610da3-ad82-80bf-9459-dd1260eb7da0&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Sparkles',
     color: 'pink',
     bgColor: 'from-pink-500 to-pink-700',
@@ -133,7 +133,7 @@ const myths = [
     description: '인간과 신의 결합으로 새로운 질서를 만든 신화를 만나보세요.',
     story: '세경본풀이는 인간과 신의 결합을 통해 새로운 사회적 질서와 규범이 생겨났음을 전하는 이야기입니다.',
     meaning: '질서, 규범, 새로운 시작을 상징합니다.',
-    image: '/images/세경본풀이.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A50bc7095-e608-46bc-a654-a57f0a230f1b%3A%E1%84%89%E1%85%A6%E1%84%80%E1%85%A7%E1%86%BC%E1%84%87%E1%85%A9%E1%86%AB%E1%84%91%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%B5.png?table=block&id=27610da3-ad82-8070-955e-d05e57dd5ded&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Mountain',
     color: 'indigo',
     bgColor: 'from-indigo-500 to-indigo-700',
@@ -150,7 +150,7 @@ const myths = [
     description: '마을 입구를 지키는 수호석상의 신화를 만나보세요.',
     story: '돌하르방은 마을 입구에 세워져 외부의 나쁜 기운을 막고 마을의 안전을 지키는 수호석상입니다.',
     meaning: '안전, 보호, 장수를 상징합니다.',
-    image: '/images/돌하르방(장승).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A8c559453-b909-40b4-a069-89aa57729b14%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC(%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%86%BC).png?table=block&id=27610da3-ad82-80be-a71a-ca4d6cfdd52d&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Users',
     color: 'stone',
     bgColor: 'from-stone-500 to-stone-700',
@@ -167,7 +167,7 @@ const myths = [
     description: '하늘의 별과 인간 운명을 연결하는 신을 만나보세요.',
     story: '칠성신은 하늘의 별과 인간의 운명을 이어주며, 특히 수명과 복을 관장한다고 여겨졌습니다.',
     meaning: '운명, 수명, 복을 상징합니다.',
-    image: '/images/칠성신.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Aed208b98-993c-4ded-9395-6d8f260a2dc0%3A%E1%84%8E%E1%85%B5%E1%86%AF%E1%84%89%E1%85%A5%E1%86%BC%E1%84%89%E1%85%B5%E1%86%AB.png?table=block&id=27610da3-ad82-805f-afc8-c470f0a7e621&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     iconName: 'Sparkles',
     color: 'yellow',
     bgColor: 'from-yellow-500 to-yellow-700',
@@ -211,7 +211,7 @@ export default function MythsPage() {
 
     window.addEventListener('beforeunload', handleBeforeUnload);
     window.addEventListener('popstate', handlePopState);
-    
+
     // 페이지 로드 시 이미지 프리로딩
     preloadImages();
 
@@ -224,7 +224,7 @@ export default function MythsPage() {
   return (
     <div className="min-h-screen brand-gradient">
       <Header />
-      
+
       {/* Spacing between header and main content */}
       <div className="pt-16"></div>
 

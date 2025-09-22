@@ -266,7 +266,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '설문대할망',
     title: '창조의 거인',
     description: '한라산과 제주도를 만든 거인 여신으로, 강력한 리더십과 창조력을 가진 당신은 큰 비전을 실현하는 능력이 있습니다.',
-    image: '/images/설문대할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A71b6fa9b-e1a2-42d9-9d48-b4e1a6586a18%3A%E1%84%89%E1%85%A5%E1%86%AF%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-8084-a49c-dc132e6ac241&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ENTJ',
     traits: ['리더십', '창조력', '결단력', '비전'],
     compatibility: '큰 프로젝트를 이끌고 새로운 것을 창조하는 일에 적합합니다.'
@@ -276,7 +276,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '삼승할망',
     title: '생명의 수호자',
     description: '아이들의 수명과 건강을 관장하는 출산의 여신으로, 따뜻한 마음과 보호 본능이 강한 당신은 다른 사람을 돌보는 일에 뛰어납니다.',
-    image: '/images/삼승할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A5d7cda96-ec7b-4cea-aa2f-d4c6b8a5f546%3A%E1%84%89%E1%85%A1%E1%86%B7%E1%84%89%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-8082-8c0f-e492f14d5b13&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ISFJ',
     traits: ['보호', '따뜻함', '책임감', '배려'],
     compatibility: '교육, 의료, 사회복지 등 사람을 돌보는 직업에 적합합니다.'
@@ -286,7 +286,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '자청비',
     title: '풍요의 여신',
     description: '농사와 곡식을 풍요롭게 지켜주는 여신으로, 활기차고 긍정적인 에너지를 가진 당신은 성장과 발전을 이끄는 능력이 있습니다.',
-    image: '/images/자청비.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Ac5b71d94-8575-4616-a1e0-32ac6818fbcb%3A%E1%84%8C%E1%85%A1%E1%84%8E%E1%85%A5%E1%86%BC%E1%84%87%E1%85%B5.png?table=block&id=27610da3-ad82-8068-abb2-ea9a576fcdfb&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ENFP',
     traits: ['활력', '긍정성', '성장', '번영'],
     compatibility: '사업, 마케팅, 성장 관련 업무에 적합합니다.'
@@ -296,7 +296,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '본향당 수호신',
     title: '공동체의 지킴이',
     description: '마을을 지키는 토속 수호신으로, 공동체를 중시하고 안전을 추구하는 당신은 팀워크와 협력을 잘하는 능력이 있습니다.',
-    image: '/images/본향당 신화(마을 수호신).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A58e9714f-5a6e-4445-a347-40b6054c2b06%3A%E1%84%87%E1%85%A9%E1%86%AB%E1%84%92%E1%85%A3%E1%86%BC%E1%84%83%E1%85%A1%E1%86%BC_%E1%84%89%E1%85%B5%E1%86%AB%E1%84%92%E1%85%AA(%E1%84%86%E1%85%A1%E1%84%8B%E1%85%B3%E1%86%AF_%E1%84%89%E1%85%AE%E1%84%92%E1%85%A9%E1%84%89%E1%85%B5%E1%86%AB).png?table=block&id=27610da3-ad82-8090-8250-fd4d32051887&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ESFJ',
     traits: ['협력', '안전', '공동체', '전통'],
     compatibility: '팀 관리, 커뮤니티 운영, 안전 관련 업무에 적합합니다.'
@@ -306,7 +306,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '영등할망',
     title: '바다의 지혜자',
     description: '매년 음력 2월 제주 바다를 찾아오는 바람과 바다의 여신으로, 자연의 리듬을 읽고 조화를 추구하는 당신은 직관력이 뛰어납니다.',
-    image: '/images/영등할망.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A977df292-30a3-4c78-9fc3-a526a66b55a9%3A%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%83%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A1%E1%86%AF%E1%84%86%E1%85%A1%E1%86%BC.png?table=block&id=27610da3-ad82-801f-bb1b-e8c8e56862d6&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'INFJ',
     traits: ['직관', '조화', '자연', '지혜'],
     compatibility: '상담, 연구, 환경 관련 업무에 적합합니다.'
@@ -316,7 +316,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '해신',
     title: '바다의 통치자',
     description: '바다 깊은 곳에 사는 용왕으로, 질서와 권위를 중시하며 바다의 질서를 관장하는 당신은 체계적이고 규율을 잘 지킵니다.',
-    image: '/images/해신(용왕 전설).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Aac02e034-63c2-4289-add3-940372dfdee4%3A%E1%84%92%E1%85%A2%E1%84%89%E1%85%B5%E1%86%AB(%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8B%E1%85%AA%E1%86%BC_%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%89%E1%85%A5%E1%86%AF).png?table=block&id=27610da3-ad82-80d8-ab8d-ebfb757fabdc&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ESTJ',
     traits: ['질서', '권위', '체계', '규율'],
     compatibility: '관리, 행정, 규율 관련 업무에 적합합니다.'
@@ -326,7 +326,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '문도령',
     title: '사랑의 순례자',
     description: '인간과 선녀의 비극적 사랑 이야기의 주인공으로, 감성적이고 열정적인 당신은 깊은 감정과 예술적 감각을 가지고 있습니다.',
-    image: '/images/문도령.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A842a5830-1708-4b04-abdb-1655df672d22%3A%E1%84%86%E1%85%AE%E1%86%AB%E1%84%83%E1%85%A9%E1%84%85%E1%85%A7%E1%86%BC.png?table=block&id=27610da3-ad82-80bf-9459-dd1260eb7da0&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'INFP',
     traits: ['감성', '열정', '예술', '로맨스'],
     compatibility: '예술, 창작, 감정 관련 업무에 적합합니다.'
@@ -336,7 +336,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '세경본풀이',
     title: '질서의 설계자',
     description: '인간과 신의 결합으로 새로운 질서를 만든 신으로, 논리적이고 체계적인 당신은 새로운 시스템을 설계하는 능력이 있습니다.',
-    image: '/images/세경본풀이.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A50bc7095-e608-46bc-a654-a57f0a230f1b%3A%E1%84%89%E1%85%A6%E1%84%80%E1%85%A7%E1%86%BC%E1%84%87%E1%85%A9%E1%86%AB%E1%84%91%E1%85%AE%E1%86%AF%E1%84%8B%E1%85%B5.png?table=block&id=27610da3-ad82-8070-955e-d05e57dd5ded&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'INTJ',
     traits: ['논리', '체계', '설계', '혁신'],
     compatibility: '기획, 설계, 시스템 개발에 적합합니다.'
@@ -346,7 +346,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '돌하르방',
     title: '수호의 석상',
     description: '마을 입구를 지키는 수호석상으로, 신뢰성 있고 안정적인 당신은 변함없이 자리를 지키며 보호하는 능력이 있습니다.',
-    image: '/images/돌하르방(장승).png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3A8c559453-b909-40b4-a069-89aa57729b14%3A%E1%84%83%E1%85%A9%E1%86%AF%E1%84%92%E1%85%A1%E1%84%85%E1%85%B3%E1%84%87%E1%85%A1%E1%86%BC(%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B3%E1%86%BC).png?table=block&id=27610da3-ad82-80be-a71a-ca4d6cfdd52d&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ISTJ',
     traits: ['신뢰', '안정', '보호', '지속성'],
     compatibility: '보안, 품질관리, 안정적 업무에 적합합니다.'
@@ -356,7 +356,7 @@ const mythCharacters: Record<string, MythCharacter> = {
     name: '칠성신',
     title: '별의 예언자',
     description: '하늘의 일곱 별과 인간 운명을 연결하는 신으로, 창의적이고 직관적인 당신은 무한한 가능성을 상상하는 능력이 있습니다.',
-    image: '/images/칠성신.png',
+    image: 'https://gdpark-official.notion.site/image/attachment%3Aed208b98-993c-4ded-9395-6d8f260a2dc0%3A%E1%84%8E%E1%85%B5%E1%86%AF%E1%84%89%E1%85%A5%E1%86%BC%E1%84%89%E1%85%B5%E1%86%AB.png?table=block&id=27610da3-ad82-805f-afc8-c470f0a7e621&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=1470&userId=&cache=v2',
     mbtiType: 'ENTP',
     traits: ['창의', '직관', '상상', '혁신'],
     compatibility: '기획, 마케팅, 창작 관련 업무에 적합합니다.'
