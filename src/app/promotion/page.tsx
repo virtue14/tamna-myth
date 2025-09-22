@@ -463,7 +463,7 @@ export default function DesignPage() {
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 font-medium max-w-2xl mx-auto leading-relaxed flex items-center justify-center gap-1">
                 <Image
-                  src="/images/엠포스.png"
+                  src="/images/https://gdpark-official.notion.site/image/attachment%3Ac0903e43-72e4-450c-87c6-aa6d23d4659e%3A%E1%84%8B%E1%85%A6%E1%86%B7%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3.png?table=block&id=27610da3-ad82-806e-b755-f0079a14150d&spaceId=26250d26-3cd7-4e1f-9826-154f79449575&width=280&userId=&cache=v2.png"
                   alt="M4ce 팀 로고"
                   width={48}
                   height={32}
